@@ -22,6 +22,7 @@ describe('readNight', () => {
   it('aggregates the fixture, counts its bad line, and preserves missing owners and offsets', () => {
     const digest = readNight(fixtureRuns, '2026-10-28');
     expect(digest?.badLines).toBe(1);
+    expect(digest?.counts).toEqual({ ok: 10, retry: 4, fail: 1 });
     expect(digest?.rows.map((row) => row.job)).toEqual([
       'digest/render',
       'fixtures/refresh',
@@ -54,6 +55,7 @@ describe('readNight', () => {
       night: '2026-10-30',
       rows: [],
       badLines: 0,
+      counts: { ok: 0, retry: 0, fail: 0 },
     });
   });
 
@@ -80,6 +82,7 @@ describe('readNight', () => {
         lastAt: '2026-10-30T10:00:00+02:00',
       }],
       badLines: 2,
+      counts: { ok: 1, retry: 2, fail: 0 },
     });
   });
 });

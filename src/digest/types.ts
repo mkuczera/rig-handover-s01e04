@@ -1,5 +1,7 @@
 export type RunStatus = 'ok' | 'retry' | 'fail';
 
+export type RunCounts = Record<RunStatus, number>;
+
 export type DigestRow = {
   job: string;
   owner: string | null;
@@ -16,6 +18,8 @@ export type DigestNight = {
   // The reader returns rows sorted by job so HTML and JSON share one order.
   rows: DigestRow[];
   badLines: number;
+  // Counts are valid log events, including retries before a job later succeeds.
+  counts: RunCounts;
 };
 
 // A missing file returns null; an empty file returns a digest with no rows.
