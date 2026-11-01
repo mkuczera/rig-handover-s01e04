@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-01
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by |
+|---|-------|------------|
+| [1](https://github.com/mkuczera/rig-handover-s01e04/issues/1) | Digest contract: row type and reader signature | — |
+| [2](https://github.com/mkuczera/rig-handover-s01e04/issues/2) | Read and aggregate a night's run log | #1 |
+| [3](https://github.com/mkuczera/rig-handover-s01e04/issues/3) | Render the digest page | #1 |
+| [4](https://github.com/mkuczera/rig-handover-s01e04/issues/4) | Serve the digest as JSON | #1 |
+| [5](https://github.com/mkuczera/rig-handover-s01e04/issues/5) | Link nightly digests from the status board | #1 |
+| [6](https://github.com/mkuczera/rig-handover-s01e04/issues/6) | Test the digest routes | #1 |
+| [7](https://github.com/mkuczera/rig-handover-s01e04/issues/7) | Publish an HTML preview for review | #3, #4, #5, #6 |
+| [8](https://github.com/mkuczera/rig-handover-s01e04/issues/8) | Remove the preview marker and archive the plan | #7 |
+
+The [public preview](https://mega-s01e04-mk-20261101.web.app/) was replaced after review with the same page saved without `LANE_MARKER`. The banner now reads “no marker set.”
