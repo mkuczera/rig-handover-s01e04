@@ -71,6 +71,9 @@ issues for this plan.
 
 Done when: the preview link is sent to the reviewer.
 
+Review note (2026-11-01): sending the link was too early to close the review issue. Issue #7
+stayed open until the reviewer confirmed seeing the marked page; ADR 0003 now states this gate.
+
 ## 4. Clean up
 
 The preview carries this lane's marker on a public link (ADR 0003). Take the marker off: save the

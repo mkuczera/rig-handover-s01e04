@@ -12,7 +12,9 @@ in a shell this agent can run.
 
 1. Read `plan.md`, `AGENTS.md` and `docs/adr/`.
 2. Draft the split as a table: title · plan section · scope · done when · blocked by.
-   One issue per unit of work.
+   One issue per unit of work. If a later issue depends on an outside review, make the wait
+   explicit: the review issue stays open until the reviewer confirms the look, and clean-up
+   is blocked by that issue (ADR 0003). Sending a link alone does not satisfy that gate.
 3. **Stop and show the table to the human.** Publish nothing until they approve it.
 4. Ask the human what every issue here must carry (fields, labels, wording), unless it is
    already written down in this session or in the repo.

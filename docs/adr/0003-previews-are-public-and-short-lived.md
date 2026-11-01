@@ -14,9 +14,14 @@ all. Nobody had cleaned it up, because that was nobody's issue.
   any CLI will do, as long as the link is a real host (not an IP, not localhost) and we can upload over it.
 - Every preview loses its lane marker once its review is in: the same page, saved with `LANE_MARKER`
   unset, uploaded over the same link. The plan has an issue for that.
+- When a reviewer must look before clean-up, sending the link does not complete the review issue.
+  Keep that issue open until the reviewer confirms the look, and make the clean-up issue depend on it.
+- Check the public link without lane access before sending it, and check the replacement at that
+  same link after removing the marker.
 - No previews in the repo, in issues, or in chat attachments: there the marker can't be taken off again.
 
 ## Consequences
 
 - Each plan that ends in a review carries a clean-up step.
 - A link that still shows a lane marker after the plan is done is a bug.
+- A review issue closed before the reviewer looks can start clean-up too soon.
